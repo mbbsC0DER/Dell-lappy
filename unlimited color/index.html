@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR PLAY</title>
+    <style>
+        h1{
+            color:rgb(236, 206, 206);
+        }
+    </style>
+</head>
+<body>
+    <h3>Start to see variety of colors and stop to terminate it!
+    </h3>
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+</body>
+<SCRIPt>
+    const rand_col = ()=> {
+        return Math.floor(Math.random() * 256)
+    }
+    let repeat ; 
+    document.querySelector("#start").addEventListener("click" , ()=> {
+        repeat = setInterval( ()=> {
+            document.querySelector("body").style.backgroundColor = `rgb(${rand_col()} , ${rand_col()} , ${rand_col()})`
+        } , 1)
+    })
+
+    document.querySelector("#stop").addEventListener("click" , ()=> {
+        clearInterval(repeat) ;
+        console.log("color stop ");
+        repeat = null ; 
+    })
+</SCRIPt>
+
+</html>

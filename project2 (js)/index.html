@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+</head>
+
+<body>
+    <h1>PRATHAM NEGI</h1>
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+</body>
+<script>
+    let repeat ;
+    document.querySelector("#start").addEventListener( "click" ,  ()=> {
+         repeat = setInterval( ()=> {
+            console.log("start ho gya shaabji")
+        } , 2000)
+        // console.log(repeat)
+    })
+    
+    document.querySelector("#stop").addEventListener("click" , ()=> {
+        // global repeat ;
+        console.log("hello") ;
+        clearInterval(repeat) ;
+    })
+</script>
+</html>
